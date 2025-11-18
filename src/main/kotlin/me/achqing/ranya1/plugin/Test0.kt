@@ -9,7 +9,6 @@ import com.mikuac.shiro.enums.AtEnum
 import org.springframework.stereotype.Component
 import java.util.regex.Matcher
 
-
 @Shiro
 @Component
 class Test0 {
