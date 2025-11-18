@@ -1,0 +1,13 @@
+# 该配置为反向连接示例
+server:
+  port: 8189
+
+shiro:
+  ws:
+    server:
+      enable: true
+      url: ""
+    plugin-list:
+
+
+
