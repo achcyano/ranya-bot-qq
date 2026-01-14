@@ -4,6 +4,7 @@ import com.mikuac.shiro.annotation.GroupMessageHandler
 import com.mikuac.shiro.annotation.common.Shiro
 import com.mikuac.shiro.core.Bot
 import com.mikuac.shiro.dto.event.message.GroupMessageEvent
+import com.mikuac.shiro.dto.event.message.MessageEvent
 import org.springframework.stereotype.Component
 
 /**
@@ -18,6 +19,13 @@ import org.springframework.stereotype.Component
 @Shiro
 @Component
 class QuoteReplyPlugin {
+
+    companion object {
+        // 消息格式常量
+        private const val SUFFIX_COMPLETED = "了"
+        private const val SENTENCE_END = "！"
+        private const val SELF_TARGET = "自己"
+    }
 
     @GroupMessageHandler
     fun handleQuoteReply(bot: Bot, event: GroupMessageEvent) {
@@ -59,7 +67,7 @@ class QuoteReplyPlugin {
         
         // 获取目标用户信息
         var targetId = senderId
-        var targetName = "自己"
+        var targetName = SELF_TARGET
         
         // 检查是否有回复消息
         val replyMsg = event.reply
@@ -83,9 +91,10 @@ class QuoteReplyPlugin {
             if (keywordParts.size > 1) {
                 keyword = keywordParts[0]
                 val qqNumber = keywordParts[1]
-                // 尝试解析QQ号
-                targetId = qqNumber.toLongOrNull() ?: senderId
-                if (targetId != senderId) {
+                // 尝试解析QQ号，验证格式（QQ号通常是5-11位数字）
+                val parsedQQ = qqNumber.toLongOrNull()
+                if (parsedQQ != null && qqNumber.length in 5..11 && qqNumber.all { it.isDigit() }) {
+                    targetId = parsedQQ
                     targetName = qqNumber
                 }
             }
@@ -114,11 +123,13 @@ class QuoteReplyPlugin {
     /**
      * 获取回复消息的用户名称
      */
-    private fun getReplyUserName(event: GroupMessageEvent, replyMsg: com.mikuac.shiro.dto.event.message.MessageEvent): String {
+    private fun getReplyUserName(event: GroupMessageEvent, replyMsg: MessageEvent): String {
         // 尝试从群成员信息中获取用户名称
         // 如果无法获取，使用QQ号
+        val bot = event.bot ?: return replyMsg.userId.toString()
+        
         try {
-            val memberInfo = event.bot?.getGroupMemberInfo(event.groupId, replyMsg.userId, false)
+            val memberInfo = bot.getGroupMemberInfo(event.groupId, replyMsg.userId, false)
             return memberInfo?.data?.card?.takeIf { it.isNotEmpty() }
                 ?: memberInfo?.data?.nickname
                 ?: replyMsg.userId.toString()
@@ -137,16 +148,16 @@ class QuoteReplyPlugin {
     ): String {
         // 使用CQ码@用户
         val senderMention = "[CQ:at,qq=$senderId]"
-        val targetMention = if (targetName == "自己") {
-            "自己"
+        val targetMention = if (targetName == SELF_TARGET) {
+            SELF_TARGET
         } else {
             "[CQ:at,qq=$targetId]"
         }
         
         return if (additionalText.isEmpty()) {
-            "$senderMention ${keyword}了 $targetMention！"
+            "$senderMention $keyword$SUFFIX_COMPLETED $targetMention$SENTENCE_END"
         } else {
-            "$senderMention $keyword $targetMention $additionalText！"
+            "$senderMention $keyword $targetMention $additionalText$SENTENCE_END"
         }
     }
     
