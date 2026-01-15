@@ -6,7 +6,8 @@ shiro:
     server:
       enable: true
       url: ""
-    plugin-list:
+  plugin-list:
+  - me.achqing.ranya1.plugin.QuoteReplyPlugin
 
 api:
   key: "YOUR_API_KEY"
