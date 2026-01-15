@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e081e6-07dc-48dc-a74e-c0d1c6cce861" name="更改" comment="第一次跑通 &amp; HelloWorld">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/utils/MsgPrefix.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/Test0.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/Test0.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/Test0.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/QuoteReplyPlugin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +131,7 @@
       <workItem from="1763428889435" duration="172000" />
       <workItem from="1763429073343" duration="6384000" />
       <workItem from="1763452689569" duration="1590000" />
+      <workItem from="1768463969928" duration="7441000" />
     </task>
     <task id="LOCAL-00001" summary="第一次跑通 &amp; HelloWorld">
       <option name="closed" value="true" />

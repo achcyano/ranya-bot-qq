@@ -34,8 +34,8 @@ dependencies {
 	val vShiro = "2.5.0"
 	implementation("com.mikuac:shiro:$vShiro")
 
-	val vZai = "0.1.0"
-	implementation("ai.z.openapi:zai-sdk:$vZai")
+//	val vZai = "0.1.0"
+//	implementation("ai.z.openapi:zai-sdk:$vZai")
 
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("com.fasterxml.jackson.core:jackson-databind")
