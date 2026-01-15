@@ -19,7 +19,9 @@ class QuoteReplyPlugin : BotPlugin() {
         when {
             message == "o.O" -> bot?.sendGroupMsg(groupId, "尊嘟", false)
             message == "O.o" -> bot?.sendGroupMsg(groupId, "假嘟", false)
-            message.contains("[CQ:image") -> return MESSAGE_IGNORE
+            message.contains("[CQ:") &&
+                    (!message.contains("[CQ:reply"))
+                    && (!message.contains("[CQ:at")) -> return MESSAGE_IGNORE
             message.startsWithAny("[", "/") && message.contains("/")
                 -> return bot?.quoteReply(event)!!
             else -> return MESSAGE_IGNORE
@@ -42,7 +44,7 @@ data class ParsedMessage(
 fun Bot.quoteReply(event: GroupMessageEvent): Int {
     println(event.message)
 
-    val message = event?.message ?: return MESSAGE_BLOCK
+    val message = event.message ?: return MESSAGE_BLOCK
     val groupId = event.groupId ?: return MESSAGE_BLOCK
     val senderId = event.userId
 
