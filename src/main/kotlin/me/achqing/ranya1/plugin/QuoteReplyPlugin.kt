@@ -71,8 +71,8 @@ fun Bot.quoteReply(event: GroupMessageEvent): Int {
         isTargetSelf
     )
 
-    val finalMsg = if (parsed.replyMessageId != null) {
-        "[CQ:reply,id=${parsed.replyMessageId}]$replyMsg"
+    val finalMsg = if (event.messageId!= null) {
+        "[CQ:reply,id=${event.messageId}]$replyMsg"
     } else {
         replyMsg
     }

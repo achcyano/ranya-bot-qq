@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e081e6-07dc-48dc-a74e-c0d1c6cce861" name="更改" comment="修复CQ:video错误回复的问题">
+    <list default="true" id="94e081e6-07dc-48dc-a74e-c0d1c6cce861" name="更改" comment="更新README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +225,8 @@
       <workItem from="1768480531064" duration="7000" />
       <workItem from="1768481075697" duration="1735000" />
       <workItem from="1768486176345" duration="1093000" />
-      <workItem from="1768627914584" duration="1720000" />
+      <workItem from="1768627914584" duration="2092000" />
+      <workItem from="1768640300857" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="第一次跑通 &amp; HelloWorld">
       <option name="closed" value="true" />
@@ -276,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768487227732</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="更新README.md">
+      <option name="closed" value="true" />
+      <created>1768629721682</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1768629721682</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +297,8 @@
     <MESSAGE value="添加reply功能" />
     <MESSAGE value="修复jar启动问题" />
     <MESSAGE value="修复CQ:video错误回复的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复CQ:video错误回复的问题" />
+    <MESSAGE value="更新README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
