@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e081e6-07dc-48dc-a74e-c0d1c6cce861" name="更改" comment="更新README.md">
+    <list default="true" id="94e081e6-07dc-48dc-a74e-c0d1c6cce861" name="更改" comment="修复消息回复错误的问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/QuoteReplyPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/achqing/ranya1/plugin/QuoteReplyPlugin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +227,11 @@
       <workItem from="1768481075697" duration="1735000" />
       <workItem from="1768486176345" duration="1093000" />
       <workItem from="1768627914584" duration="2092000" />
-      <workItem from="1768640300857" duration="336000" />
+      <workItem from="1768640300857" duration="1337000" />
+      <workItem from="1769400231623" duration="1000" />
+      <workItem from="1769514931486" duration="2000" />
+      <workItem from="1769780654713" duration="79000" />
+      <workItem from="1769860439559" duration="875000" />
     </task>
     <task id="LOCAL-00001" summary="第一次跑通 &amp; HelloWorld">
       <option name="closed" value="true" />
@@ -284,11 +289,30 @@
       <option name="project" value="LOCAL" />
       <updated>1768629721682</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修复消息回复错误的问题">
+      <option name="closed" value="true" />
+      <created>1768641542682</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1768641542682</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次跑通 &amp; HelloWorld" />
@@ -298,7 +322,8 @@
     <MESSAGE value="修复jar启动问题" />
     <MESSAGE value="修复CQ:video错误回复的问题" />
     <MESSAGE value="更新README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新README.md" />
+    <MESSAGE value="修复消息回复错误的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复消息回复错误的问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

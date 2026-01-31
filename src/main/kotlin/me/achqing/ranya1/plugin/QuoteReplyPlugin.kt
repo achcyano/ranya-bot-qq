@@ -22,7 +22,7 @@ class QuoteReplyPlugin : BotPlugin() {
             message.contains("[CQ:") &&
                     (!message.contains("[CQ:reply"))
                     && (!message.contains("[CQ:at")) -> return MESSAGE_IGNORE
-            message.startsWithAny("[", "/") && message.contains("/")
+            message.startsWithAny("[", "/") && message.contains("/") && (!message.contains("[CQ:face"))
                 -> return bot?.quoteReply(event)!!
             else -> return MESSAGE_IGNORE
         }
